@@ -6,7 +6,7 @@ import scipy
 
 def brownian(init=100, steps=10000, mu=0, sigma=1):
     series = [init]
-    for i in range(1, steps + 1):
+    for _ in range(1, steps + 1):
         previousStep = series[-1:][0]
         currentStep = previousStep + random.normalvariate(mu, sigma)
         series = series + [currentStep]
@@ -15,7 +15,7 @@ def brownian(init=100, steps=10000, mu=0, sigma=1):
 
 def geoBrownian(init=100, steps=100, mu=0, sigma=0.0025):
     series = [init]
-    for i in range(1, steps):
+    for _ in range(1, steps):
         normalOffset = random.normalvariate(mu, sigma)
         previousStep = series[-1:][0]
         currentStep = np.exp(np.log(previousStep) + normalOffset)
