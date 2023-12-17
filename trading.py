@@ -30,6 +30,7 @@ x_points = range(1, steps + 1)
 trials = 100
 
 
+# -- formatting the subplots divider --
 def get_cmap(n, name="hsv"):
     """Returns a function that maps each index in 0, 1, ..., n-1 to a distinct
     RGB color; the keyword argument name must be a standard mpl colormap name."""
@@ -37,6 +38,8 @@ def get_cmap(n, name="hsv"):
 
 
 colors = get_cmap(trials)
+
+# -- END formatting the subplots divider --
 
 # for i in range(trials):
 #     plt.plot(x_points, geoBrownian(steps=steps), color=colors(i + 1))
